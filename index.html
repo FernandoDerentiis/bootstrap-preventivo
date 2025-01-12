@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="container mt-3">
+      <nav
+        class="navbar navbar-expand-lg bg-dark border-bottom border-body"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Bool Factory</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Servizi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contatti</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- inizio form -->
+    <main>
+      <div class="container mt-5">
+        <h2>Modulo di Contatto</h2>
+
+        <!-- Griglia con due colonne: una per la card e una per il modulo -->
+        <div class="row">
+          <!-- Colonna per il form di contatto -->
+          <div class="col-md-7">
+            <form>
+              <!-- Campo Nome -->
+              <div class="mb-3">
+                <label for="firstName" class="form-label">Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Inserisci il tuo nome"
+                  required
+                />
+              </div>
+
+              <!--  Cognome -->
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Cognome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Inserisci il tuo cognome"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Inserisci la tua email"
+                  required
+                />
+              </div>
+
+              <!-- Tipo di Lavoro  -->
+              <div class="mb-3">
+                <label for="jobType" class="form-label">Tipo di Lavoro</label>
+                <select class="form-select" id="jobType" required>
+                  <option value="" disabled selected>
+                    Scegli il tuo tipo di lavoro
+                  </option>
+                  <option value="full-time">Full-time</option>
+                  <option value="part-time">Part-time</option>
+                  <option value="freelancer">Freelancer</option>
+                  <option value="student">Studente</option>
+                </select>
+              </div>
+
+              <!-- Commenti -->
+              <div class="mb-3">
+                <label for="comments" class="form-label">Commenti</label>
+                <textarea
+                  class="form-control"
+                  id="comments"
+                  rows="3"
+                  placeholder="Lascia un commento"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Checkbox per l'accettazione delle politiche di privacy -->
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="privacyPolicy"
+                  required
+                />
+                <label class="form-check-label" for="privacyPolicy"
+                  >Accetto le politiche di privacy</label
+                >
+              </div>
+
+              <!-- Pulsante di invio -->
+              <button type="submit" class="btn btn-primary">Invia</button>
+            </form>
+          </div>
+
+          <!-- Colonna per la card, allineata a destra -->
+          <div class="col-md-5">
+            <div class="card" style="width: 18rem">
+              <img src="" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">I nostri contatti</h5>
+                <p class="card-text">
+                  Se hai bisogno di aiuto puoi contattarci:
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">help@bboolfactory.com</li>
+                <li class="list-group-item">+1122334455</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Help desk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container mt-5 mb-3">
+      <div class="text-bg-dark text-center p-3">
+        2024 - Tutti i diritti riservati
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
