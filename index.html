@@ -13,23 +13,12 @@
     />
   </head>
   <body>
-    <!-- navbar -->
+    <!-- Navbar -->
     <header class="container mt-3">
-      <nav
-        class="navbar navbar-expand-lg bg-dark border-bottom border-body"
-        data-bs-theme="dark"
-      >
+      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Bool Factory</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -48,109 +37,80 @@
         </div>
       </nav>
     </header>
-
-    <!-- inizio form -->
+  
+    <!-- Inizio Form -->
     <main>
       <div class="container mt-5">
-        <h2>Modulo di Contatto</h2>
-
-        <!-- Griglia con due colonne: una per la card e una per il modulo -->
-        <div class="row">
-          <!-- Colonna per il form di contatto -->
-          <div class="col-md-7">
+        <div class="row justify-content-center">
+          <!-- Colonna per il form -->
+          <div class="col-12 col-md-6 col-lg-5">
+            <h2 class="mb-4">Modulo di Contatto</h2>
+            <p class="mb-4">Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+  
             <form>
-              <!-- Campo Nome -->
+              <!-- Nome -->
               <div class="mb-3">
                 <label for="firstName" class="form-label">Nome</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="firstName"
-                  placeholder="Inserisci il tuo nome"
-                  required
-                />
+                <input type="text" class="form-control" id="firstName" placeholder="Inserisci il tuo nome" required />
               </div>
-
-              <!--  Cognome -->
+  
+              <!-- Cognome -->
               <div class="mb-3">
                 <label for="lastName" class="form-label">Cognome</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="lastName"
-                  placeholder="Inserisci il tuo cognome"
-                  required
-                />
+                <input type="text" class="form-control" id="lastName" placeholder="Inserisci il tuo cognome" required />
               </div>
-
+  
               <!-- Email -->
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Inserisci la tua email"
-                  required
-                />
+                <input type="email" class="form-control" id="email" placeholder="Inserisci la tua email" required />
               </div>
-
-              <!-- Tipo di Lavoro  -->
+  
+              <!-- Tipo di Lavoro -->
               <div class="mb-3">
                 <label for="jobType" class="form-label">Tipo di Lavoro</label>
                 <select class="form-select" id="jobType" required>
-                  <option value="" disabled selected>
-                    Scegli il tuo tipo di lavoro
-                  </option>
+                  <option value="" disabled selected>Scegli il tuo tipo di lavoro</option>
                   <option value="full-time">Full-time</option>
                   <option value="part-time">Part-time</option>
                   <option value="freelancer">Freelancer</option>
                   <option value="student">Studente</option>
                 </select>
               </div>
-
+  
               <!-- Commenti -->
               <div class="mb-3">
-                <label for="comments" class="form-label">Commenti</label>
-                <textarea
-                  class="form-control"
-                  id="comments"
-                  rows="3"
-                  placeholder="Lascia un commento"
-                  required
-                ></textarea>
+                <label for="comments" class="form-label">Textarea con Bootstrap 5</label>
+                <textarea class="form-control" id="comments" rows="3" placeholder="Lascia un commento" required></textarea>
               </div>
-
+  
+              <!-- Codice promozionale (opzionale) -->
+              <div class="mb-3">
+                <label for="promoCode" class="form-label">Codice Promozionale (opzionale)</label>
+                <input type="text" class="form-control" id="promoCode" placeholder="Inserisci il tuo codice promozionale" />
+              </div>
+  
               <!-- Checkbox per l'accettazione delle politiche di privacy -->
               <div class="mb-3 form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="privacyPolicy"
-                  required
-                />
-                <label class="form-check-label" for="privacyPolicy"
-                  >Accetto le politiche di privacy</label
-                >
+                <input type="checkbox" class="form-check-input" id="privacyPolicy" required />
+                <label class="form-check-label" for="privacyPolicy">Accetto le politiche di privacy</label>
               </div>
-
+  
               <!-- Pulsante di invio -->
-              <button type="submit" class="btn btn-primary">Invia</button>
+              <button type="submit" class="btn btn-primary">Calcola Preventivo</button>
             </form>
           </div>
-
+  
           <!-- Colonna per la card, allineata a destra -->
-          <div class="col-md-5">
-            <div class="card" style="width: 18rem">
-              <img src="" class="card-img-top" alt="..." />
+          <div class="col-12 col-md-6 col-lg-5 mt-4 mt-md-0">
+            <div class="card w-100">
+              <img src="..." class="card-img-top" alt="..." style="width: 50px; height: 200px; object-fit: cover;" />
               <div class="card-body">
                 <h5 class="card-title">I nostri contatti</h5>
-                <p class="card-text">
-                  Se hai bisogno di aiuto puoi contattarci:
-                </p>
+                <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">help@bboolfactory.com</li>
+                <li class="list-group-item">help@boolfactory.com</li>
                 <li class="list-group-item">+1122334455</li>
               </ul>
               <div class="card-body">
@@ -161,13 +121,16 @@
         </div>
       </div>
     </main>
-
+  
+   
+  
+    <!-- Footer -->
     <footer class="container mt-5 mb-3">
       <div class="text-bg-dark text-center p-3">
         2024 - Tutti i diritti riservati
       </div>
     </footer>
-
+  </body>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
