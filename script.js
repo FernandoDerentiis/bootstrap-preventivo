@@ -1,16 +1,25 @@
-// Selezioniamo il form e il pulsante di submit
-const contactForm = document.getElementById("contactForm");
-const submitButton = contactForm.querySelector('button[type="submit"]');
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (evento) {
+    evento.preventDefault(); //modifica il comportamento del form
 
-// Quando il pulsante viene cliccato, eseguiamo questa funzione
-submitButton.addEventListener("click"),
-  function (event) {
-    // Impediamo l'invio del form in modo tradizionale
-    event.preventDefault();
-  };
-// Otteniamo i dati inseriti dall'utente
-const jobType = document.getElementById("jobType").value;
-const promoCode = document.getElementById("promoCode").value.toUpperCase();
+    console.log("Il form è stato inviato.");
 
-console.log("Tipo di lavoro selezionato:", jobType);
-console.log("Codice promozionale inserito:", promoCode);
+    //  tipo di lavoro selezionato
+    let tipoDiLavoro = document.getElementById("jobType").value;
+    console.log("Tipo di lavoro scelto:", tipoDiLavoro);
+
+    //  codice promozionale scritto dall'utente
+    let codicePromozionale = document.getElementById("promoCode").value;
+    console.log("Codice promozionale inserito:", codicePromozionale);
+
+    // Lista dei codici promozionali validi
+    const codiciPromozionaliValidi = [
+      "YHDNU32",
+      "JANJC63",
+      "PWKCN25",
+      "SJDPO96",
+      "POCIE24",
+    ];
+    console.log("Codici promozionali validi:", codiciPromozionaliValidi);
+  });
