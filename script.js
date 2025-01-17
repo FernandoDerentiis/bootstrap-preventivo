@@ -1,8 +1,7 @@
-document
+document //modifica il comportamento del form
   .getElementById("contactForm")
   .addEventListener("submit", function (evento) {
-    evento.preventDefault(); //modifica il comportamento del form
-
+    evento.preventDefault();
     console.log("Il form è stato inviato.");
 
     //  tipo di lavoro selezionato
@@ -13,7 +12,7 @@ document
     let codicePromozionale = document.getElementById("promoCode").value;
     console.log("Codice promozionale inserito:", codicePromozionale);
 
-    // Lista dei codici promozionali validi
+    // Lista dei codici promozonali validi
     const codiciPromozionaliValidi = [
       "YHDNU32",
       "JANJC63",
@@ -34,7 +33,34 @@ document
     }
     console.log("Prezzo orario:", prezzoOrario);
 
-    // Calcola il prezzo totale per 10 ore
+    // Calcola il prezzo toale per 10 ore
     let prezzoFinale = prezzoOrario * 10;
     console.log("Prezzo iniziale (10 ore):", prezzoFinale);
+
+    // Controlla se il codice promozionale è nella lista
+    let codicePromozionaleValido = false;
+    for (let i = 0; i < codiciPromozionaliValidi.length; i++) {
+      if (codicePromozionale === codiciPromozionaliValidi[i]) {
+        codicePromozionaleValido = true;
+        console.log("Codice promozionale valido:", codicePromozionale);
+        break;
+      }
+    }
+
+    // Applica lo sconto del 25% se il codice è valido
+    if (codicePromozionaleValido) {
+      prezzoFinale = prezzoFinale * 0.75;
+      console.log("Sconto applicato. Prezzo finale:", prezzoFinale);
+    } else if (codicePromozionale) {
+      console.log("Codice promozionale non valido.");
+      document.getElementById("result").textContent =
+        "Codice promozionale non valido.";
+    }
+
+    // Mostra il prezzo finale
+    document.getElementById("result").textContent =
+      "Il prezzo finale è: €" + prezzoFinale.toFixed(2);
+    console.log("Prezzo finale mostrato all'utente:", prezzoFinale.toFixed(2));
   });
+
+//
